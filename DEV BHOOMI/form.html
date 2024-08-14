@@ -1,0 +1,214 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form @DBUU</title>
+  <link href="stylesheet.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+     
+#desin
+{
+  font-family: times new roman;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#desin td,#desin th {
+  border: 2px solid black;
+  padding: 8px;
+}
+
+
+#desin th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: purple;
+  color: white;
+}
+  </style>
+ </head>
+ <body>
+<header>
+
+	<h1 class="header"><img src="https://www.dbuu.ac.in/wp-content/uploads/2021/10/devbhoomi-logo.webp" width="auto" height="20%"> WELCOME TO DEV BHOOMI UTTARAKHAND UNIVERSITY </h1>
+
+
+</header>
+<div class="navbar">
+<a href="index.html">HOME</a>
+<div class="dropdown">
+    <button class="dropbtn">STUDY MATERIAL      <!-- Dropdown Creation -->
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="main.html">PHYSICS</a>
+      <a href="maths.html">MATHEMATICS</a>
+	  <a href="chem.html">CHEMISTRY</a>
+    </div>
+  </div> 
+</div>
+<form>
+<center>
+<div>
+<h1 style="background-color:purple; text-align:center; color:white; font-family:times new roman; font-size:30px;">STUDENT REGISTRATION FORM</h1>
+</div>
+<div>
+<table border="1" cellspacing="0" width="100%">
+ <tr>
+     <td><b>Student Name</b></td>
+	 <td><input type="text" name="student_name" /></td>
+ </tr>
+ <tr>
+      <td><b>Student ID</b></td>
+	 <td><input type="text" name="student_id"/></td>
+ </tr>
+  <tr>
+      <td><b>E-mail ID</b></td>
+	 <td><input type="text" name="email_id"/></td>
+ </tr>
+   <tr>
+      <td><b>Mobile No.</b></td>
+	 <td><input type="text" name="mobile_no"/></td>
+ </tr>
+    <tr>
+      <td><b>Select Course Name</b></td>
+	 <td>
+	 <select>
+	     <option>Select Course</option>
+	     <option>B.TECH (CSE)</option>
+		 <option>B.TECH (ME)</option>
+		 <option>B.TECH (ECE)</option>
+		 <option>B.TECH (EEE)</option>
+		 <option>B.TECH (CE)</option>
+	 </select>
+	 </td>
+ </tr>
+    <tr>
+      <td><b>Gender</b></td>
+	 <td><input type="radio" name="gender"/>Male  |  <input type="radio" name="gender"/>Female</td>
+ </tr>
+     <tr>
+      <td><b>Choose subjects</b></td>
+	 <td><input type="checkbox"/>Mathematics-I</br>
+     <input type="checkbox"/>Physics</br>
+     <input type="checkbox"/>Chemistry</br>
+     <input type="checkbox"/>Elements of Mechanical Engineering</br>
+     <input type="checkbox"/>Elements of Electrical Engineering</br>
+     <input type="checkbox"/>Algorithmic Thinking And Problem Solving Using C</br>
+     <input type="checkbox"/>Computer-Aided Engineering Drawing</br>
+     <input type="checkbox"/>Emerging Technology</td>
+ </tr>
+</table>
+</div>
+<div>
+<center>
+<h2 style="background-color:purple; text-align:center; color:white; font-family:times new roman; font-size:30px;">PERSONAL DETAILS</h2>
+<table border="1" cellspacing="0" width="100%">
+<tr>
+     <td colspan="1"><b>Father's Name</b></td>
+	 <td colspan="4"><input type="text" name="father_name" /></td>
+ </tr>
+ <tr>
+      <td colspan="1"><b>Father's Occupation</b></td>
+	 <td colspan="4"><input type="text" name="father_occu"/></td>
+ </tr>
+  <tr>
+      <td><b>Father's E-mail ID</b></td>
+	 <td><input type="text" name="email_id f"/></td>
+	  <td><b>Father's Phone No.:<b></td>
+	  <td><input type="text" name="phone"/></td>
+ </tr>
+<tr>
+     <td colspan="1"><b>Mother's Name</b></td>
+	 <td colspan="4"><input type="text" name="mother_name" /></td>
+ </tr>
+ <tr>
+      <td colspan="1"><b>Mother's Occupation</b></td>
+	 <td colspan="4"><input type="text" name="mother_occu"/></td>
+ </tr>
+  <tr>
+      <td><b>Mother's E-mail ID</b></td>
+	 <td><input type="text" name="email_id m"/></td>
+	  <td><b>Mother's Phone No.:<b></td>
+	  <td><input type="text" name="phone_no"/></td>
+ </tr>
+ <tr>
+     <td colspan="1"><b>Student's Id Proof</b></td>
+	 <td colspan="4">
+	 <select>
+	     <option>Select ID Proof</option>
+	     <option>Aadhar Card</option>
+		 <option>Pan Card</option>
+		 <option>Passport</option>
+		 <option>Ration Card</option>
+		 <option>Others(Not Indian)</option>
+	 </select>
+	 </td>
+</tr>
+<tr>
+	 <td colspan="1"><b>Id Proof Number</b></td>
+	 <td colspan="4"><input type="text" name="proof_no"/></td>
+</tr>
+</table>
+</center>
+</div>
+<div>
+<center>
+<div>
+<h2 style="background-color:seagreen; text-align:center; color:white; font-family:times new roman; font-size:30px;">STUDENT ACADEMIC DETAILS</h2>
+</div>
+<table id="desin">
+ <tr>
+     <th width="20%"> Name of the Board </th>
+	 <th width="20%"> Qualifying Exam </th>
+	 <th> Passing Year </th>
+	 <th> Name of School/University </th>
+	 <th> Select Result Type
+	     <select>
+	         <option>Percentage</option>
+			 <option>C.G.P.A.</option>
+		 </select>
+	 </th>
+ </tr>
+ <tr>
+     <td>
+         <select>
+		     <option>CENTRAL BOARD OF SECONDARY EDUCATION (C.B.S.E.)</option>
+			 <option>C.I.S.C.E. or I.S.C. or C.I.S.C.E.</option>
+			 <option>UTTAR PRADESH BOARD OF SECONDARY EDUCATION</option>
+			 <option>INDIAN INSTITUTE OF TECHNOLOGY (IIT)</option>
+			 <option>Any Other Educational Board/University</option>
+		 </select>
+	 </td>
+	 <td>Intermediate Examination or equivalent examination as per MHRD</td>
+	 <td><input type="text" name="passing year"></td>
+	 <td><textarea rows="4" cols="50" placeholder="Type your school name here..."></textarea></td>	
+     <td><input type="text" name="Marks" placeholder="Type your marks in percentage/C.G.P.A." ></td>	 
+ </tr>
+ <tr>
+     <td>
+         <select>
+		     <option>CENTRAL BOARD OF SECONDARY EDUCATION (C.B.S.E.)</option>
+			 <option>C.I.S.C.E. or I.S.C. or C.I.S.C.E.</option>
+			 <option>UTTAR PRADESH BOARD OF SECONDARY EDUCATION</option>
+			 <option>INDIAN INSTITUTE OF TECHNOLOGY (IIT)</option>
+			 <option>Any Other Educational Board/University</option>
+		 </select>
+	 </td>
+	 <td>10<sup>th</sup> Examination or equivalent examination as per MHRD</td>
+	 <td><input type="text" name="passing year"></td>
+	 <td><textarea rows="4" cols="50" placeholder="Type your school name here..."></textarea></td>	
+     <td><input type="text" name="Marks" placeholder="Type your marks in percentage/C.G.P.A." ></td>	 
+ </tr>
+</table>
+</center>
+</div>
+<div style="margin-top:20px;">
+<input type="submit" value="SUBMIT"  style="color:purple; background-color:#bbdefb;">
+</div>
+</form>
+</center>
+ </body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="stylesheet.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+ </head>
+ <body id="body" onload="initClock()">
+<header>
+
+	<h1 class="header"><img src="https://admissions.dbuu.ac.in/static/media/pentaLogo.51238e30.png" width="auto" height="20%"> WELCOME TO DEV BHOOMI UTTARAKHAND UNIVERSITY </h1>
+
+
+</header>
+<div class="navbar">
+<a href="index.html">HOME</a>
+</div>
+<h2 style="background-color:purple; text-align:center; color:white; font-family:times new roman; font-size:30px;">Mid-Term Examinations December 2021 (TIME TABLE)</h2>
+
+<div style="font-size:18px; color:red;">
+<ul>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/BHA-SOA.pdf">Click here for&nbsp; BHA- SOA</a></strong></li>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/SJLA.pdf">Click here for SJLA (<i> School of Journalism &amp; Liberal Arts</i>)</a></strong></li>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/SOAD.pdf">Click here for&nbsp; SOAD (<i>School of Architecture &amp; Design</i>)</a></strong></li>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/SOAS.pdf">Click here for SOAS (<i> School of Applied Sciences</i>)</a></strong></li>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/SOCSE.pdf">Click here for&nbsp; SOCSE (<i> School of Computer Science &amp; Engineering</i> )</a></strong></li>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/SOE.pdf">Click here for&nbsp; SOE (<i> School of Engineering </i>)</a></strong></li>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/SOHMT.pdf">Click here for&nbsp; SOHMT (<i> School of Hotel Management &amp; Tourism</i>)</a></strong></li>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/SOMC.pdf">Click here for&nbsp; SOMC (<i> School of Management &amp; Commerce</i> )</a></strong></li>
+<li><strong><a style="font-size:18px; color:red;" href="https://www.dbuu.ac.in/wp-content/uploads/2021/11/SOPR.pdf">Click here for&nbsp; SOPR (<i> School of Pharmacy &amp; Research</i>)</a></strong></li>
+</ul>
+
+<footer>Copyright © DEV BHOOMI UTTARAKHAND UNIVERSITY <br> <address><b>Address:</b> Chakrata Road Navgaon, Manduwala, Dehradun, Uttarakhand 248007 </address><div style="text-align:right">
+<center>
+<div class="datetime">
+      <div class="date">
+        <span id="dayname">Day</span>,
+        <span id="month">Month</span>
+        <span id="daynum">00</span>,
+        <span id="year">Year</span>
+      </div>
+      <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+        <span id="period">AM</span>
+      </div>
+    </div>
+</center>
+    <!--digital clock end-->
+
+    <script type="text/javascript">
+    function updateClock(){
+      var now = new Date();
+      var dname = now.getDay(),
+          mo = now.getMonth(),
+          dnum = now.getDate(),
+          yr = now.getFullYear(),
+          hou = now.getHours(),
+          min = now.getMinutes(),
+          sec = now.getSeconds(),
+          pe = "AM";
+
+          if(hou >= 12){
+            pe = "PM";
+          }
+          if(hou == 0){
+            hou = 12;
+          }
+          if(hou > 12){
+            hou = hou - 12;
+          }
+
+          Number.prototype.pad = function(digits){
+            for(var n = this.toString(); n.length < digits; n = 0 + n);
+            return n;
+          }
+
+          var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+          var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+          var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+          for(var i = 0; i < ids.length; i++)
+          document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+    }
+
+    function initClock(){
+      updateClock();
+      window.setInterval("updateClock()", 1);
+    }
+    </script>
+ </footer>
+</body>
+</html>
